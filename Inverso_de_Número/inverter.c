@@ -10,5 +10,9 @@ int inverter(int numero){
 }
 
 int main(){
+    int numero;
+    printf("Digite o numero que deseja inverter: \n");
+    scanf("%d",&numero);
+    printf("Numero invertido: %d",inverter(numero));
     return 0;
 }
