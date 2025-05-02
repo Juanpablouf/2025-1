@@ -8,5 +8,10 @@ int potencia(int base, int expoente){
     return resultado;
 }
 int main(){
+    int base, expoente;
+    printf("Digite a base: \n");
+    scanf("%d",&base);
+    printf("Digite o expoente: \n");
+    scanf("%d",&expoente);
     return 0;
 }
