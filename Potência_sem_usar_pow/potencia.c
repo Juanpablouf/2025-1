@@ -13,5 +13,9 @@ int main(){
     scanf("%d",&base);
     printf("Digite o expoente: \n");
     scanf("%d",&expoente);
+
+    int resultado = potencia(base,expoente);
+    printf("Resultado de %d elevado a %d eh: %d ",base,expoente,resultado);
+
     return 0;
 }
