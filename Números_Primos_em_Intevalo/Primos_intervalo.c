@@ -11,9 +11,18 @@ bool ehPrimo(int n) {
 
 int main() {
     int i, f;
-    printf("Digite o numero onde o intervalo inicia: ");
+    printf("Digite o numero onde o intervalo inicia: \n");
     scanf("%d", &i);                               
-    printf("Digite o numero onde o intervalo finaliza: ");
+    printf("Digite o numero onde o intervalo finaliza: \n");
     scanf("%d", &f);
+
+    printf("Estes sao os numeros primos do intervalo\n");
+
+    for (int cont = i; cont <= f; cont++){
+        if (ehPrimo(cont)){
+             printf("%d ",cont);
+        }  
+    }
+    
     return 0;
 }
