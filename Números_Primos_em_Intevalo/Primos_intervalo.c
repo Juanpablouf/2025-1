@@ -10,14 +10,10 @@ bool ehPrimo(int n) {
 }
 
 int main() {
-    int i;
-    printf("Numero para teste se eh primo");
-    scanf("%d",&i);
-    if (ehPrimo(i)){
-        printf("%d eh primo",i);  
-    }
-    else{
-        printf("%d nao eh primo",i);
-    }
+    int i, f;
+    printf("Digite o numero onde o intervalo inicia: ");
+    scanf("%d", &i);                               
+    printf("Digite o numero onde o intervalo finaliza: ");
+    scanf("%d", &f);
     return 0;
 }
