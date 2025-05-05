@@ -22,6 +22,12 @@ int main(){
             freq[i] = cont; 
         }
     }
-    
+    printf("\nFrequencia:\n");
+    for (i = 0; i < 10; i++) {
+        if (freq[i] != 0) {
+            printf("%d aparece %d vez(es)\n", numero[i], freq[i]);
+        }
+    }
+
     return 0;
 }
