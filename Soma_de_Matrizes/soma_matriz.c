@@ -17,6 +17,13 @@ int main(){
             resultado[i][j] = matriz1[i][j] + matriz2[i][j];
         }
     }
+    printf("Resultado:\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", resultado[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
