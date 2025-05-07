@@ -45,6 +45,19 @@ void buscarContato(Contato contatos[], int total) {
         printf("Contato não encontrado.\n");
     }
 }
+void exibirContatos(Contato contatos[], int total) {
+    if (total == 0) {
+        printf("Nenhum contato cadastrado.\n");
+        return;
+    }
+    printf("\nLista de Contatos:\n");
+    for (int i = 0; i < total; i++) {
+        printf("Contato %d:\n", i + 1);
+        printf("Nome: %s\n", contatos[i].nome);
+        printf("Telefone: %s\n", contatos[i].telefone);
+        printf("Email: %s\n\n", contatos[i].email);
+    }
+}
 
 int main(){    
     return 0;
