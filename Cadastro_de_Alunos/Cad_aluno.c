@@ -7,5 +7,10 @@ struct Aluno {
 };
 
 int main(){
+    int n;
+    printf("Quantos alunos deseja cadastrar? ");
+    scanf("%d", &n);
+    struct Aluno alunos[n];
+
     return 0;
   }
