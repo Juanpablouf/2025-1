@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <string.h>
 
 struct Aluno {
     char nome[100];
@@ -22,6 +23,14 @@ int main(){
         scanf("%d", &alunos[i].matricula);
         printf("Média: ");
         scanf("%f", &alunos[i].media); 
+    }
+
+    printf("\nAlunos Aprovados:\n");
+    for (int i = 0; i < n; i++) {
+        if (alunos[i].media >= 7.0) {
+            printf("Nome: %s, Matrícula: %d, Média: %.2f\n",
+                   alunos[i].nome, alunos[i].matricula, alunos[i].media);
+        }
     }
 
     return 0;
