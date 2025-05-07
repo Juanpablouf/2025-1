@@ -43,7 +43,20 @@ void buscarProduto(Produto produtos[], int total) {
     }
     printf("Produto com código %d não encontrado.\n", codigo);
 }
-
+void listarProdutos(Produto produtos[], int total) {
+    if (total == 0) {
+        printf("Nenhum produto cadastrado.\n");
+        return;
+    }
+    printf("\nLista de Produtos:\n");
+    for (int i = 0; i < total; i++) {
+        printf("Produto %d:\n", i + 1);
+        printf("Nome: %s\n", produtos[i].nome);
+        printf("Código: %d\n", produtos[i].codigo);
+        printf("Quantidade: %d\n", produtos[i].quantidade);
+        printf("Preço: %.2f\n\n", produtos[i].preco);
+    }
+}
 int main(){
 
     return 0;
