@@ -27,6 +27,22 @@ void cadastrarProduto(Produto produtos[], int *total) {
     (*total)++;
     printf("Produto cadastrado com sucesso!\n");
 }
+void buscarProduto(Produto produtos[], int total) {
+    int codigo;
+    printf("Digite o código do produto: ");
+    scanf("%d", &codigo);
+    for (int i = 0; i < total; i++) {
+        if (produtos[i].codigo == codigo) {
+            printf("\nProduto encontrado:\n");
+            printf("Nome: %s\n", produtos[i].nome);
+            printf("Código: %d\n", produtos[i].codigo);
+            printf("Quantidade: %d\n", produtos[i].quantidade);
+            printf("Preço: %.2f\n", produtos[i].preco);
+            return;
+        }
+    }
+    printf("Produto com código %d não encontrado.\n", codigo);
+}
 
 int main(){
 
