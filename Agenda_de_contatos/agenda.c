@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <string.h>
 
 #define MAX_CONTATOS 100
 
@@ -23,6 +24,26 @@ void adicionarContato(Contato contatos[], int *total) {
     contatos[*total] = novo;
     (*total)++;
     printf("Contato adicionado com sucesso!\n");
+}
+
+void buscarContato(Contato contatos[], int total) {
+    char nomeBusca[50];
+    int encontrado = 0;
+    printf("Digite o nome a buscar: ");
+    scanf(" %[^\n]", nomeBusca);
+    for (int i = 0; i < total; i++) {
+        if (strcmp(contatos[i].nome, nomeBusca) == 0) {
+            printf("\nContato encontrado:\n");
+            printf("Nome: %s\n", contatos[i].nome);
+            printf("Telefone: %s\n", contatos[i].telefone);
+            printf("Email: %s\n", contatos[i].email);
+            encontrado = 1;
+            break;
+        }
+    }
+    if (!encontrado) {
+        printf("Contato não encontrado.\n");
+    }
 }
 
 int main(){    
