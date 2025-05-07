@@ -58,7 +58,34 @@ void exibirContatos(Contato contatos[], int total) {
         printf("Email: %s\n\n", contatos[i].email);
     }
 }
-
-int main(){    
+int main(){
+    Contato contatos[MAX_CONTATOS];
+    int total = 0;
+    int opcao;
+    do {
+        printf("\n--- Menu ---\n");
+        printf("1. Adicionar contato\n");
+        printf("2. Buscar contato por nome\n");
+        printf("3. Exibir todos os contatos\n");
+        printf("0. Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+        switch (opcao) {
+            case 1:
+                adicionarContato(contatos, &total);
+                break;
+            case 2:
+                buscarContato(contatos, total);
+                break;
+            case 3:
+                exibirContatos(contatos, total);
+                break;
+            case 0:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opção inválida.\n");
+        }
+    } while (opcao != 0);    
     return 0;
 }
