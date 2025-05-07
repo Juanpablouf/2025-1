@@ -22,5 +22,12 @@ int main(){
     int valor;
     printf("Digite o valor a ser buscado: ");
     scanf("%d", &valor);
+
+    int posicao = buscaBinaria(vetor, tamanho, valor);
+    if (posicao != -1) {
+        printf("Valor %d encontrado na posição %d do vetor.\n", valor, posicao);
+    } else {
+        printf("Valor %d não encontrado no vetor.\n", valor);
+    }
     return 0;
 }
