@@ -14,8 +14,14 @@ int ehPalindromo(char str[]) {
     return 1; 
 }
 
-
 int main(){
-
+    char palavra[100];        
+    printf("Digite uma palavra: "); 
+    scanf("%s", palavra);           
+    if (ehPalindromo(palavra)) {
+        printf("É um palíndromo!\n");  
+    } else {
+        printf("Não é um palíndromo.\n"); 
+    }
     return 0;
 }
