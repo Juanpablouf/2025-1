@@ -17,6 +17,10 @@ int buscaBinaria(int vetor[], int tamanho, int valor) {
 }
 
 int main(){
-
+    int vetor[] = {2, 4, 7, 10, 15, 20, 23, 31, 42, 55};
+    int tamanho = sizeof(vetor) / sizeof(vetor[0]);
+    int valor;
+    printf("Digite o valor a ser buscado: ");
+    scanf("%d", &valor);
     return 0;
 }
