@@ -58,6 +58,35 @@ void listarProdutos(Produto produtos[], int total) {
     }
 }
 int main(){
+    Produto produtos[MAX_PRODUTOS];
+    int total = 0;
+    int opcao;
+    do {
+        printf("\nMenu:\n");
+        printf("1. Cadastrar produto\n");
+        printf("2. Buscar produto por código\n");
+        printf("3. Listar produtos\n");
+        printf("0. Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
 
+        switch (opcao) {
+            case 1:
+                cadastrarProduto(produtos, &total);
+                break;
+            case 2:
+                buscarProduto(produtos, total);
+                break;
+            case 3:
+                listarProdutos(produtos, total);
+                break;
+            case 0:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opção inválida!\n");
+        }
+
+    } while (opcao != 0);
     return 0;
 }
